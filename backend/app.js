@@ -15,7 +15,7 @@ mongoose
   .catch((error) => console.log("Failed to connect to DB\n", error));
 
 app.use(express.json());
-app.use("/", mainRoute);
+app.use("/api", mainRoute);
 
 app.listen(PORT, () => {
   console.log("Server Listening at", PORT);
