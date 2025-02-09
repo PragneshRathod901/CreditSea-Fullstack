@@ -1,0 +1,38 @@
+.container {
+  background-image: linear-gradient(to bottom right, #ff512f, #dd2476);
+  padding: 3rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.5rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 1rem;
+}
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+}
+.heading {
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.heading2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+li {
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0.2rem;
+  column-gap: 0.5rem;
+  align-items: start;
+}

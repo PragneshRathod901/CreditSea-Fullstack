@@ -1,12 +1,7 @@
 import "./App.css";
-import XmlUpload from "./components/XmlUpload/XmlUpload";
 
-function App() {
-  return (
-    <div className="App">
-      <XmlUpload />
-    </div>
-  );
+function App({ child }) {
+  return <div className="App">{child}</div>;
 }
 
 export default App;

@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import "./index.css";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
-const XmlUpload = () => {
+const XmlUpload = ({ rootURL }) => {
   const [file, setFile] = useState(null);
   const [message, setMessage] = useState("");
+  let navigate = useNavigate();
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
   const uploadReq = async (data) => {
     try {
-      console.log(JSON.stringify({ xml: data }));
-      const response = await axios.post("http://localhost:8082/api/upload", {
+      const response = await axios.post(rootURL + "upload", {
         xml: data,
       });
-      console.log(response.data._id);
+      navigate("/Report/" + response.data._id);
       setMessage("Success!");
     } catch (error) {
       setMessage("Upload failed. Try again.");
@@ -33,6 +34,7 @@ const XmlUpload = () => {
     };
     reader.readAsText(file);
   };
+
   return (
     <div className="xmlContainer">
       <div className="formContainer">
