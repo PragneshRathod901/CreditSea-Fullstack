@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "Pragnesh Rathod",
   "license": "ISC",
@@ -18,5 +19,9 @@
     "mongoose": "^6.1.4",
     "nodemon": "^2.0.15",
     "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
   }
 }
