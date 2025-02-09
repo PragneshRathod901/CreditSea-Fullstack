@@ -2,7 +2,7 @@ import React from "react";
 import BulletPoint from "./BulletPoint";
 import OrderedList from "./OrderedList";
 
-const AccountView = ({ data, heading, objectKey }) => {
+const AccountView = ({ data, heading, objectKey, keyUtility }) => {
   return (
     <div className="heading2">
       {heading}
@@ -10,7 +10,12 @@ const AccountView = ({ data, heading, objectKey }) => {
         {data &&
           data.hasOwnProperty(objectKey) &&
           data[objectKey]["BanksOfCreditCards"].map((val, ind) => (
-            <OrderedList data={data} ind={ind} objectKey={objectKey} />
+            <OrderedList
+              data={data}
+              ind={ind}
+              objectKey={objectKey}
+              keyUtility={keyUtility}
+            />
           ))}
       </ul>
     </div>

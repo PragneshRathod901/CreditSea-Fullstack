@@ -8,7 +8,16 @@ import { useParams } from "react-router";
 const CreditView = ({ rootURL }) => {
   const [data, setData] = useState({});
   let { id } = useParams();
-
+  let keyUtility = (str) => {
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+      if (i > 0 && str[i] === str[i].toUpperCase()) {
+        result += " ";
+      }
+      result += str[i];
+    }
+    return result;
+  };
   useEffect(() => {
     axios
       .get(rootURL + id)
@@ -30,6 +39,7 @@ const CreditView = ({ rootURL }) => {
           data={data}
           heading={"Basic Details:"}
           objectKey={"BasicDetails"}
+          keyUtility={keyUtility}
         />
       </div>
       <div className="contentContainer">
@@ -37,6 +47,7 @@ const CreditView = ({ rootURL }) => {
           data={data}
           heading={"Report Summary:"}
           objectKey={"ReportSummary"}
+          keyUtility={keyUtility}
         />
       </div>
       <div className="contentContainer">
@@ -44,6 +55,7 @@ const CreditView = ({ rootURL }) => {
           data={data}
           heading={"CreditAccounts Information :"}
           objectKey={"CreditAccountsInformation"}
+          keyUtility={keyUtility}
         />
       </div>
     </div>

@@ -24,6 +24,7 @@
   font-weight: 600;
   font-size: 1.5rem;
   text-align: left;
+  color: yellow;
 }
 
 li {
@@ -35,4 +36,5 @@ li {
   padding: 0.2rem;
   column-gap: 0.5rem;
   align-items: start;
+  color: #fff;
 }

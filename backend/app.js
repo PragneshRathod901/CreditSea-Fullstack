@@ -3,10 +3,10 @@ const express = require("express");
 var cors = require("cors");
 const mongoose = require("mongoose");
 
-const DB_URI = "mongodb://127.0.0.1:27017";
+const DB_URI = process.env.DB_URL;
 
 const app = express();
-const PORT = 8082;
+const PORT = process.env.DB_Port;
 const mainRoute = require("./routes/userCredit.routes");
 
 mongoose
