@@ -8,9 +8,7 @@ import CreditView from "./components/CreditView/CreditView";
 import XmlUpload from "./components/XmlUpload/XmlUpload";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const url =
-  process.env.REACT_APP_Backend_URL ||
-  "https://creditsea-fullstack-b9nm.onrender.com/api/";
+const url = process.env.REACT_APP_Backend_URL || "http://localhost:8082/api/";
 
 root.render(
   <React.StrictMode>
